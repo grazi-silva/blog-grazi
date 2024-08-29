@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - Blog da Grazi{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Bem-vindo ao Blog da Grazi!</h1>
+    <p class="lead">Estudante de Informática no IFRN - Campus Pau dos Ferros</p>
+    <hr class="my-4">
+    <p>Explore meu blog para conhecer mais sobre meus cursos, interesses e experiências.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'sobre' %}" role="button">Saiba mais</a>
+</div>
+{% endblock %}

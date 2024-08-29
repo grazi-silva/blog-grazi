@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Sobre - Blog da Grazi{% endblock %}
+
+{% block content %}
+<h2>Sobre Mim</h2>
+
+<p>Olá! Sou Grazi, estudante de Informática no Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte (IFRN) - Campus Pau dos Ferros.</p>
+
+<div class="d-flex justify-content-center align-items-center">
+    <img src="{% static 'img/grazi.png' %}" alt="Foto de Grazi" class="img-fluid rounded-circle mb-3" width="175" height="175">
+</div>
+
+<h3>Meus Interesses</h3>
+<div class="row">
+    {% for interesse in interesses %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ interesse.nome }}</h5>
+                <p class="card-text">{{ interesse.descricao }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Cursos - Blog da Grazi{% endblock %}
+
+{% block content %}
+<h2>Meus Cursos</h2>
+<div class="row">
+    {% for curso in cursos %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ curso.nome }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ curso.instituicao }}</h6>
+                <p class="card-text">Ano de Conclusão: {{ curso.ano_conclusao }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
